@@ -13,7 +13,7 @@ namespace PR6
         {
             InitializeComponent();
             VideoPlayer.Source = new Uri(TV.AllChannels[0].Src);
-            VideoPlayer.Play();
+            VideoPlayer.Play();/*23*/
         }
 
         private void NextChannel(object sender, RoutedEventArgs e)
