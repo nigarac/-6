@@ -51,6 +51,11 @@ namespace PR6.Classes
             });
             AllChannels.Add(new Channel()
             {
+                Name = "Michael Jackson Billie Jean",
+                Src = @"D:\2.mp4"
+            });
+            AllChannels.Add(new Channel() //Канал Error Обязательно должен быть последним!
+            {
                 Name = "Error",
                 Src = @"D:\4.mp4"
             });
