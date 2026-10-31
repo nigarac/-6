@@ -63,6 +63,18 @@
                 Height="25"
                 Margin="10,0,10,10"
                 Background="White"/>
+            <Button
+                Click="pult"
+                Content="Введите канал"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Width="83"
+                Height="25"
+                Margin="0,0,417,10"
+                Background="White"/>
+            <TextBox
+                x:Name="tvAdress" Margin="400,15,326,10"
+                />
 
         </Grid>
     </Grid>

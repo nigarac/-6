@@ -36,18 +36,23 @@ namespace PR6.Classes
         {
             AllChannels.Add(new Channel()
             {
-                Name = "Практическое занятие N3.",
+                Name = "Не верил",
                 Src = @"D:\1.mp4"
             });
             AllChannels.Add(new Channel()
             {
-                Name = "Практическое занятие N4.",
-                Src = @"D:\2.mp4"
+                Name = "Michael Jackson Beat it.",
+                Src = @"D:\22.mp4"
             });
             AllChannels.Add(new Channel()
             {
-                Name = "Практическое занятие N5.",
+                Name = "Michael Jackson Billie Jean",
                 Src = @"D:\3.mp4"
+            });
+            AllChannels.Add(new Channel()
+            {
+                Name = "Error",
+                Src = @"D:\4.mp4"
             });
 
         }
@@ -80,20 +85,28 @@ namespace PR6.Classes
             ActiveChannel++;
             SwapChannel(mediaElement, nameChannel);
         }
+        public void forTVAdress(MediaElement mediaElement, Label nameChannel)
+        {
+            SwapChannel(mediaElement, nameChannel);
+        }
         public void BackChannel (MediaElement mediaElement, Label nameChannel)
         {
             ActiveChannel--;
             SwapChannel(mediaElement, nameChannel);
         }
 
-        public void UpSound()
+        public void UpSound(MediaElement videoPlayer)
         {
             
-            activeVolume++;
-        }
-        public void DownSound()
-        {
+                videoPlayer.Volume += 0.1;
+            
 
+        }
+        public void DownSound(MediaElement videoPlayer)
+        {
+            
+                videoPlayer.Volume -= 0.1;
+            
         }
     }
 }
