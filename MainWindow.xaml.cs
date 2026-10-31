@@ -26,5 +26,15 @@ namespace PR6
             TV.BackChannel(VideoPlayer, NameChannel);
 
         }
+
+        private void downHearth(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void upHearth(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

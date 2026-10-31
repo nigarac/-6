@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
@@ -19,13 +20,15 @@ namespace PR6.Classes
             }
             set
             {
-                if (activeChannel < AllChannels.Count - 1)
-                    activeChannel = value;
-                else
+                if (AllChannels.Count == 0) return;
+
+                if (value == AllChannels.Count)
                     activeChannel = 0;
-                if (activeChannel < 0)
+                else if (value < 0)
                     activeChannel = AllChannels.Count - 1;
-                
+                else
+                    activeChannel = value;
+
             }
         }
         public List<Channel> AllChannels = new List<Channel>();
@@ -34,17 +37,17 @@ namespace PR6.Classes
             AllChannels.Add(new Channel()
             {
                 Name = "Практическое занятие N3.",
-                Src = ""
+                Src = @"D:\1.mp4"
             });
             AllChannels.Add(new Channel()
             {
                 Name = "Практическое занятие N4.",
-                Src = ""
+                Src = @"D:\2.mp4"
             });
             AllChannels.Add(new Channel()
             {
                 Name = "Практическое занятие N5.",
-                Src = ""
+                Src = @"D:\3.mp4"
             });
 
         }
@@ -54,7 +57,7 @@ namespace PR6.Classes
             {
                 From = 1,
                 To = 0,
-                Duration = TimeSpan.FromSeconds(0.6)
+                Duration = TimeSpan.FromSeconds(0.3)
             };
             startAnimation.Completed += delegate
             {
@@ -64,7 +67,7 @@ namespace PR6.Classes
                 {
                     From = 0,
                     To = 1,
-                    Duration = TimeSpan.FromSeconds(0.6)
+                    Duration = TimeSpan.FromSeconds(0.3)
                 };
                 mediaElement.BeginAnimation(MediaElement.OpacityProperty, endAnimation);
             };
@@ -85,7 +88,8 @@ namespace PR6.Classes
 
         public void UpSound()
         {
-
+            
+            activeVolume++;
         }
         public void DownSound()
         {

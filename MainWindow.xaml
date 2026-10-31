@@ -46,7 +46,7 @@
                 Margin="115,0,0,10"
                 Background="White"/>
             <Button
-                Click=""
+                Click="downHearth"
                 Content="Тише"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
@@ -55,7 +55,7 @@
                 Margin="10,0,115,10"
                 Background="White"/>
             <Button
-                Click=""
+                Click="upHearth"
                 Content="Громче"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
